@@ -1,0 +1,122 @@
+KONSEP OOP
+NAMA	: SUMARNI
+NIM	: D1041141079
+
+Modifier (min.3)
+
+1. private static final String LOG_TAG = 
+                            MainActivity.class.getSimpleName();
+
+2. public class MainActivity extends AppCompatActivity {
+   private static final String LOG_TAG = 
+                               MainActivity.class.getSimpleName();
+
+3.public void launchSecondActivity(View view) {
+       Log.d(LOG_TAG, "Button clicked!");
+
+
+Method (min.4)
+1. public void showToast(View view) {
+        	Toast toast = Toast.makeText(this, 			R.string.toast_message, Toast.LENGTH_SHORT);
+        	toast.show();
+        	mCount= 0;
+        	if (mShowCount != null)
+            		mShowCount.setText(Integer.toString(mCount));
+    	}
+
+2. public void returnReply(View view) {
+        	String reply = mReply.getText().toString();
+        	Intent replyIntent = new Intent();
+        	replyIntent.putExtra(EXTRA_REPLY, reply);
+        	setResult(RESULT_OK,replyIntent);
+        	finish();
+    	}
+
+3. public void countUp(View view) {
+        	mCount++;
+        	if (mShowCount != null)
+            		mShowCount.setText(Integer.toString(mCount));
+    	}
+
+4. public void countDown(View view) {
+        	mCount--;
+        	if (mShowCount != null)
+            		mShowCount.setText(Integer.toString(mCount));
+    	}
+
+
+Class (min.2)
+1. public class SecondActivity extends AppCompatActivity {
+    public static final String EXTRA_REPLY =
+                         "com.example.android.twoactivities.extra.REPLY";
+    private EditText mReply;
+
+2.public class MainActivity extends AppCompatActivity {
+    private int mCount = 79;
+    private TextView mShowCount;
+
+
+Function (min.3)
+1.public static final String EXTRA_MESSAGE = 
+                   "com.example.android.twoactivities.extra.MESSAGE";
+
+2. public static final String EXTRA_REPLY = 
+                     "com.example.android.twoactivities.extra.REPLY";
+
+3. public static final int TEXT_REQUEST = 1;
+
+
+Constructor (min.2)
+1. public class Execution{
+		public Execution(){
+			System.out.println("Eksekusi method constructor");
+		}
+	
+	}
+
+2. public class User{
+		public User(String username, String password){
+			this.username= username;
+			this.password= password;
+
+Polimorfisme (min.3)
+1. public class Hewan (
+   public void suara() (
+   System.out.println ("Hewan bersuara 1");
+   }
+
+2. public class ayam extend Hewan {
+   public void suara (){
+   System.out.println ("Ayam berkokok ...");
+   }
+
+3. public class Polimorphism {
+   		public static void main(String[ ] args) {
+      			cetakObyek(new Balok());
+      			cetakObyek(new PersegiPanjang());
+      			cetakObyek(new BangunDatar());
+      			cetakObyek(new Object());
+   		}
+   		public static void cetakObyek(Object obyek) {
+      			System.out.println(obyek);
+   		}
+	}
+
+
+
+Inheritance (min.3)
+
+   }
+
+1. public class MainActivity extends AppCompatActivity {
+	}
+
+2. public class SecondActivity extends AppCompatActivity {
+	}
+
+3. public class ThirdActivity extends AppCompatActivity {
+	}
+
+
+ 
+
